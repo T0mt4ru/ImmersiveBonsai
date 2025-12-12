@@ -17,43 +17,59 @@ public class BonsaiData {
 
     // All bonsai definitions in one place
     public static final List<BonsaiType> ALL_BONSAIS = List.of(
-            new BonsaiType(ModBlocks.OAK_BONSAI, "oak", Items.OAK_SAPLING, PlantType.SAPLING, Items.OAK_LOG, 4,
+            new BonsaiType(ModBlocks.OAK_BONSAI, "oak", Items.OAK_SAPLING, PlantType.SAPLING,
+                    Items.OAK_LOG, 4,
                     Dimension.OVERWORLD, 3600,
                     new ExtraDrop(Items.STICK, 1, 0.05f),
                     new ExtraDrop(Items.APPLE, 1, 0.005f)
             ),
-            new BonsaiType(ModBlocks.SPRUCE_BONSAI, "spruce", Items.SPRUCE_SAPLING, PlantType.SAPLING, Items.SPRUCE_LOG, 4,
+            new BonsaiType(ModBlocks.SPRUCE_BONSAI, "spruce", Items.SPRUCE_SAPLING, PlantType.SAPLING,
+                    Items.SPRUCE_LOG, 4,
                     Dimension.OVERWORLD, 3600,
                     new ExtraDrop(Items.STICK, 1, 0.05f)
             ),
-            new BonsaiType(ModBlocks.BIRCH_BONSAI, "birch", Items.BIRCH_SAPLING, PlantType.SAPLING, Items.BIRCH_LOG, 4,
+            new BonsaiType(ModBlocks.BIRCH_BONSAI, "birch", Items.BIRCH_SAPLING, PlantType.SAPLING,
+                    Items.BIRCH_LOG, 4,
                     Dimension.OVERWORLD, 3600,
                     new ExtraDrop(Items.STICK, 1, 0.05f)
             ),
-            new BonsaiType(ModBlocks.JUNGLE_BONSAI, "jungle", Items.JUNGLE_SAPLING, PlantType.SAPLING, Items.JUNGLE_LOG, 4,
+            new BonsaiType(ModBlocks.JUNGLE_BONSAI, "jungle", Items.JUNGLE_SAPLING, PlantType.SAPLING,
+                    Items.JUNGLE_LOG, 4,
                     Dimension.OVERWORLD, 3600,
                     new ExtraDrop(Items.STICK, 1, 0.05f),
                     new ExtraDrop(Items.COCOA_BEANS, 1, 0.01f)
             ),
-            new BonsaiType(ModBlocks.ACACIA_BONSAI, "acacia", Items.ACACIA_SAPLING, PlantType.SAPLING, Items.ACACIA_LOG, 4,
+            new BonsaiType(ModBlocks.ACACIA_BONSAI, "acacia", Items.ACACIA_SAPLING, PlantType.SAPLING,
+                    Items.ACACIA_LOG, 4,
                     Dimension.OVERWORLD, 3600,
                     new ExtraDrop(Items.STICK, 1, 0.05f)
             ),
-            new BonsaiType(ModBlocks.DARK_OAK_BONSAI, "dark_oak", Items.DARK_OAK_SAPLING, PlantType.SAPLING, Items.DARK_OAK_LOG, 4,
+            new BonsaiType(ModBlocks.DARK_OAK_BONSAI, "dark_oak", Items.DARK_OAK_SAPLING, PlantType.SAPLING,
+                    Items.DARK_OAK_LOG, 4,
                     Dimension.OVERWORLD, 3600,
                     new ExtraDrop(Items.STICK, 1, 0.05f),
                     new ExtraDrop(Items.APPLE, 1, 0.005f)
             ),
-            new BonsaiType(ModBlocks.CHERRY_BONSAI, "cherry", Items.CHERRY_SAPLING, PlantType.SAPLING, Items.CHERRY_LOG, 4,
+            new BonsaiType(ModBlocks.CHERRY_BONSAI, "cherry", Items.CHERRY_SAPLING, PlantType.SAPLING,
+                    Items.CHERRY_LOG, 4,
                     Dimension.OVERWORLD, 3600,
                     new ExtraDrop(Items.STICK, 1, 0.05f)
             ),
 
-            new BonsaiType(ModBlocks.CRIMSON_BONSAI, "crimson", Items.CRIMSON_FUNGUS, PlantType.FUNGUS, Items.CRIMSON_STEM, 4,
+            new BonsaiType(ModBlocks.MANGROVE_BONSAI, "mangrove", Items.MANGROVE_PROPAGULE, PlantType.PROPAGULE,
+                    Items.MANGROVE_LOG, 4,
+                    Dimension.OVERWORLD, 3600,
+                    new ExtraDrop(Items.STICK, 1, 0.05f),
+                    new ExtraDrop(Items.MANGROVE_ROOTS, 4, 0.5f)
+            ),
+
+            new BonsaiType(ModBlocks.CRIMSON_BONSAI, "crimson", Items.CRIMSON_FUNGUS, PlantType.FUNGUS,
+                    Items.CRIMSON_STEM, 4,
                     Dimension.NETHER, 3600,
                     new ExtraDrop(Items.NETHER_WART_BLOCK, 1, 0.25f)
             ),
-            new BonsaiType(ModBlocks.WARPED_BONSAI, "warped", Items.WARPED_FUNGUS, PlantType.FUNGUS, Items.WARPED_STEM, 4,
+            new BonsaiType(ModBlocks.WARPED_BONSAI, "warped", Items.WARPED_FUNGUS, PlantType.FUNGUS,
+                    Items.WARPED_STEM, 4,
                     Dimension.NETHER, 3600,
                     new ExtraDrop(Items.WARPED_WART_BLOCK, 1, 0.25f)
             )
@@ -76,12 +92,14 @@ public class BonsaiData {
 
     public enum PlantType {
         SAPLING,
-        FUNGUS;
+        FUNGUS,
+        PROPAGULE;
 
         public String getPlantType() {
             return switch (this) {
-                case SAPLING -> "_sapling";
-                case FUNGUS ->  "_fungus";
+                case SAPLING ->     "_sapling";
+                case FUNGUS ->      "_fungus";
+                case PROPAGULE ->   "_propagule";
             };
         }
     }

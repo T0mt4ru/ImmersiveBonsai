@@ -26,6 +26,8 @@ public class ModBlocks {
     public static final DeferredBlock<Block> DARK_OAK_BONSAI = registerBonsai("dark_oak");
     public static final DeferredBlock<Block> CHERRY_BONSAI = registerBonsai("cherry");
 
+    public static final DeferredBlock<Block> MANGROVE_BONSAI = registerBonsai("mangrove");
+
     public static final DeferredBlock<Block> CRIMSON_BONSAI = registerBonsai("crimson");
     public static final DeferredBlock<Block> WARPED_BONSAI = registerBonsai("warped");
 
